@@ -1,0 +1,12 @@
+<header class="site"><div class="wrap bar">
+<a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, home">{% include themed.html name="app-icon" static=true alt="" w=32 h=32 class="brand-icon" %}<span>{{ site.title }}</span></a>
+<div class="bar-right">
+<nav aria-label="Primary"><ul>
+{%- for item in site.data.nav.header %}
+{%- assign cur = false -%}{%- if item.url == "/" and page.url == "/" %}{% assign cur = true %}{% elsif item.url != "/" and page.url == item.url %}{% assign cur = true %}{% endif %}
+<li><a href="{{ item.url | relative_url }}"{% if cur %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+{%- endfor %}
+</ul></nav>
+{% include theme-toggle.html %}
+</div>
+</div></header>

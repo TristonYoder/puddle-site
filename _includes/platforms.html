@@ -1,0 +1,5 @@
+<div class="grid platforms">
+{%- for p in site.data.platforms %}
+<div class="card"><h3>{{ p.name }}</h3><p>{{ p.body }}</p><p class="fine">{{ p.note }}</p></div>
+{%- endfor %}
+</div>

@@ -1,0 +1,13 @@
+{%- comment -%} Download buttons. Real links appear once app_store.*_url are set in _config.yml. {%- endcomment -%}
+<div class="badges">
+{%- if site.app_store.ios_url != "" %}
+<a class="btn" href="{{ site.app_store.ios_url }}">App Store for iPhone &amp; iPad</a>
+{%- else %}
+<span class="btn soon" role="note">iPhone &amp; iPad <small>App Store, coming soon</small></span>
+{%- endif %}
+{%- if site.app_store.mac_url != "" %}
+<a class="btn" href="{{ site.app_store.mac_url }}">Mac App Store</a>
+{%- else %}
+<span class="btn soon" role="note">Mac <small>Mac App Store, coming soon</small></span>
+{%- endif %}
+</div>

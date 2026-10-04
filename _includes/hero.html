@@ -1,0 +1,11 @@
+{%- comment -%} Params: eyebrow, title, lede. Hero image is the animated plane through clouds. {%- endcomment -%}
+<section class="hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">{{ include.eyebrow | default: site.tagline }}</p>
+<h1>{{ include.title | default: site.title }}</h1>
+<p class="lede">{{ include.lede | default: site.description }}</p>
+{% include badges.html %}
+<p class="fine"><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a> &middot; <a href="{{ '/support/' | relative_url }}">Get help</a></p>
+</div>
+<div class="hero-art frame">{% include themed.html name="plane-through-clouds" alt="A paper plane flying through drifting clouds" %}</div>
+</div></section>

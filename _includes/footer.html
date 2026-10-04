@@ -1,0 +1,10 @@
+<footer class="site"><div class="wrap">
+<ul class="foot-nav">
+{%- for item in site.data.nav.footer %}
+<li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+{%- endfor %}
+</ul>
+<p>&copy; {{ site.copyright_year }} {{ site.publisher }}. {{ site.title }} is published by {{ site.publisher }}.</p>
+<p>Contact: <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+<p class="fine">Apple, App Store, iPhone, iPad, Mac, Face ID and Touch ID are trademarks of Apple Inc.</p>
+</div></footer>

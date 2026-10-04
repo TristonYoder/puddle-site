@@ -68,7 +68,7 @@ nav a:hover,nav a[aria-current=page]{border-bottom-color:var(--link)}
 .theme-toggle{align-items:center;gap:8px;font:600 .8125rem/1 var(--font);color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer;min-height:36px}
 .theme-toggle:hover{border-color:var(--link)}
 .tt-icon{width:14px;height:14px;border-radius:50%;border:2px solid currentColor;background:linear-gradient(90deg,currentColor 50%,transparent 50%)}
-.theme-toggle[data-mode=light] .tt-icon{background:transparent;box-shadow:0 0 0 2px var(--bg) inset;background:currentColor;box-shadow:none;background:radial-gradient(circle,currentColor 0 35%,transparent 38%)}
+.theme-toggle[data-mode=light] .tt-icon{background:radial-gradient(circle,currentColor 0 35%,transparent 40%)}
 .theme-toggle[data-mode=dark] .tt-icon{background:currentColor}
 
 /* hero */
@@ -158,3 +158,7 @@ footer.site a:hover{color:var(--link)}
 }
 @media (max-width:30rem){.btn{width:100%}.bar{padding-top:8px;padding-bottom:8px}}
 @media print{.intro,.theme-toggle,.skip{display:none!important}}
+
+/* layout refinements */
+.morph{max-width:24rem}
+@media (min-width:52rem){.features{grid-template-columns:repeat(3,1fr)}.platforms{grid-template-columns:repeat(3,1fr)}}

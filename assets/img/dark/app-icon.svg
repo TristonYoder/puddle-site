@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Puddle Jumper plane icon candidate">
+<title>Puddle Jumper plane icon candidate</title>
+<style>
+:root,:root{color-scheme:dark}
+:root{--bg:#001B2B;--mint:#4DFFB6;--facet:#4DFFB6;--cloud:#B0CDE0;--c1:0.07;--c2:0.13;--c3:0.2}
+.bg{fill:var(--bg)}.m{fill:var(--mint)}.ms{stroke:var(--mint)}.f{fill:var(--facet)}.cl{fill:var(--cloud)}
+.plane{fill:var(--mint);stroke:var(--mint);stroke-width:22;stroke-linejoin:round}
+</style>
+<rect class="bg" width="512" height="512"/>
+<g opacity=".1"><g class="cl" transform="translate(30 420) scale(1.6)"><rect x="0" y="-26" width="150" height="26" rx="13"/><circle cx="48" cy="-30" r="30"/><circle cx="92" cy="-38" r="38"/><circle cx="124" cy="-24" r="22"/></g><g class="cl" transform="translate(300 150) scale(1.0)"><rect x="0" y="-26" width="150" height="26" rx="13"/><circle cx="48" cy="-30" r="30"/><circle cx="92" cy="-38" r="38"/><circle cx="124" cy="-24" r="22"/></g></g>
+<g transform="translate(-6 -4)"><g class="ms" fill="none" stroke-linecap="round" stroke-width="12">
+<path d="M130 256H40" opacity=".9"></path>
+<path d="M120 214H70" opacity=".5"/><path d="M122 298H84" opacity=".5"/></g><g transform=""><path class="plane" d="M390 256L150 180L215 256L150 332Z"/><path class="f" d="M215 256L390 256L150 332Z" stroke="var(--facet)" stroke-width="10" stroke-linejoin="round"/></g></g>
+</svg>

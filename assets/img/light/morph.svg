@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Terminal prompt morphing into a paper plane">
+<title>Terminal prompt morphing into a paper plane</title>
+<style>
+:root{--bg:#F1F9F9;--mint:#001B2B;--facet:#001B2B;--cloud:#B0CDE0;--c1:0.14;--c2:0.22;--c3:0.3}
+.bg{fill:var(--bg)}.m{fill:var(--mint)}.ms{stroke:var(--mint)}.f{fill:var(--facet)}.cl{fill:var(--cloud)}
+.plane{fill:var(--mint);stroke:var(--mint);stroke-width:22;stroke-linejoin:round}
+</style>
+<rect class="bg" width="512" height="512"/>
+<rect class="m" x="277" y="297" width="112" height="46" rx="23">
+<animate attributeName="x" values="277;277;40;40;277;277" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/><animate attributeName="y" values="297;297;250;250;297;297" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/><animate attributeName="width" values="112;112;104;104;112;112" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/><animate attributeName="height" values="46;46;12;12;46;46" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/><animate attributeName="rx" values="23;23;6;6;23;23" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/>
+<animate attributeName="opacity" values="1;1;1;.15;1;.15;0;0;1;1" keyTimes="0;.1;.3;.36;.42;.48;.54;.88;.9;1" dur="6s" repeatCount="indefinite"/></rect>
+<rect class="m" x="70" y="218" width="70" height="10" rx="5" opacity="0"><animate attributeName="opacity" values="0;0;0.7;0.7;0;0" keyTimes="0;.28;.36;.64;.72;1" dur="6s" repeatCount="indefinite"/></rect><rect class="m" x="95" y="294" width="50" height="10" rx="5" opacity="0"><animate attributeName="opacity" values="0;0;0.5;0.5;0;0" keyTimes="0;.28;.36;.64;.72;1" dur="6s" repeatCount="indefinite"/></rect>
+<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 0;0 -9;0 0;0 0;0 0" keyTimes="0;.1;.3;.5;.7;.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/>
+<path class="f" d="M215 256L390 256L150 332Z" opacity="0" stroke="var(--facet)" stroke-width="22" stroke-linejoin="round"><animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;.26;.3;.7;.74;1" dur="6s" repeatCount="indefinite"/></path>
+<path class="plane" d="M220 256L133 169L220 256L133 343Z">
+<animate attributeName="d" values="M220 256L133 169L220 256L133 343Z;M220 256L133 169L220 256L133 343Z;M390 256L150 180L215 256L150 332Z;M390 256L150 180L215 256L150 332Z;M220 256L133 169L220 256L133 343Z;M220 256L133 169L220 256L133 343Z" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/><animate attributeName="stroke-width" values="46;46;22;22;46;46" keyTimes="0;0.1;0.3;0.7;0.9;1" calcMode="spline" keySplines="0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1;0.45 0 0.2 1" dur="6s" repeatCount="indefinite"/>
+</path></g>
+</svg>

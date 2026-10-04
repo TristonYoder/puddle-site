@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Terminal prompt morphing into a paper plane">
+<title>Terminal prompt morphing into a paper plane</title>
+<style>
+:root{--bg:#001B2B;--mint:#4DFFB6;--facet:#4DFFB6;--cloud:#B0CDE0;--c1:0.07;--c2:0.13;--c3:0.2}
+.bg{fill:var(--bg)}.m{fill:var(--mint)}.ms{stroke:var(--mint)}.f{fill:var(--facet)}.cl{fill:var(--cloud)}
+.plane{fill:var(--mint);stroke:var(--mint);stroke-width:22;stroke-linejoin:round}
+</style>
+<rect class="bg" width="512" height="512"/>
+<rect class="m" x="277" y="297" width="112" height="46" rx="23">
+
+</rect>
+<rect class="m" x="70" y="218" width="70" height="10" rx="5" opacity="0"></rect><rect class="m" x="95" y="294" width="50" height="10" rx="5" opacity="0"></rect>
+<g>
+<path class="f" d="M215 256L390 256L150 332Z" opacity="0" stroke="var(--facet)" stroke-width="22" stroke-linejoin="round"></path>
+<path class="plane" style="stroke-width:46" d="M220 256L133 169L220 256L133 343Z">
+
+</path></g>
+</svg>

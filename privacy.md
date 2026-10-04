@@ -3,10 +3,10 @@ layout: page
 title: Privacy Policy
 permalink: /privacy/
 description: How Puddle Jumper handles your data. The developer collects none.
-effective: "October 3, 2026"
+effective_key: privacy_effective
 applies: "Applies to Puddle Jumper for macOS, iPadOS and iOS, published by 7 & Co LLC."
 ---
-{% comment %}Effective date above must match legal.privacy_effective in _config.yml.{% endcomment %}
+
 
 ## Summary
 

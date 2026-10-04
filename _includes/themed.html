@@ -5,7 +5,8 @@
 {%- assign w = include.w | default: 512 -%}
 {%- assign h = include.h | default: 512 -%}
 {%- assign load = "eager" -%}{%- if include.lazy %}{% assign load = "lazy" %}{% endif -%}
-{%- for mode in "light,dark" | split: "," -%}
+{%- assign modes = "light,dark" | split: "," -%}
+{%- for mode in modes -%}
 <span class="th th-{{ mode | slice: 0 }} {{ include.class }}">
 {%- if include.static -%}
 <img src="{{ '/assets/img/' | append: mode | append: '/' | append: include.name | append: '.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">

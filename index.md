@@ -7,7 +7,7 @@ intro: true
 ---
 {% include hero.html eyebrow="SSH for Mac, iPad and iPhone" title="Hop to any server." lede="Puddle Jumper is an SSH client and terminal. Your hosts and credentials sync through your own iCloud. There is no account to create and nothing is sent to us." %}
 
-<section class="section" id="features" markdown="1">
+<section class="section" id="sec-features" markdown="1">
 
 ## Everything you need to get there
 
@@ -17,7 +17,7 @@ A clean terminal, your servers organized the way you think about them, and secre
 
 </section>
 
-<section class="section" id="how-it-works" markdown="1">
+<section class="section" id="sec-how-it-works" markdown="1">
 
 ## How it works
 
@@ -27,7 +27,7 @@ Three steps from a blank screen to a shell.
 
 </section>
 
-<section class="section" id="private" markdown="1">
+<section class="section" id="sec-private" markdown="1">
 
 <div class="split" markdown="1">
 <div markdown="1">
@@ -38,7 +38,7 @@ Puddle Jumper has no backend. There is no sign-up, no analytics, no tracking and
 
 Your host list lives on your devices and in your private iCloud database. Passwords and keys live in your iCloud Keychain. Session traffic goes straight from your device to the server you chose.
 
-[Read the privacy policy](/privacy/){: .textlink}
+[Read the privacy policy]({{ "/privacy/" | relative_url }}){: .textlink}
 
 </div>
 <div class="split-art" markdown="0">
@@ -48,17 +48,17 @@ Your host list lives on your devices and in your private iCloud database. Passwo
 
 </section>
 
-<section class="section" id="platforms" markdown="1">
+<section class="section" id="sec-platforms" markdown="1">
 
 ## One app, three platforms
 
-Buy once, and it works across Mac, iPad and iPhone. Requires macOS 26, iPadOS 26 or iOS 26 or later.
+One app that works across Mac, iPad and iPhone, with your hosts synced between them. Requires macOS 26, iPadOS 26 or iOS 26 or later.
 
 {% include platforms.html %}
 
 </section>
 
-<section class="section last" id="download" markdown="1">
+<section class="section last" id="sec-download" markdown="1">
 
 <div class="cta" markdown="1">
 

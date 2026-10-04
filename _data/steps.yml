@@ -1,0 +1,6 @@
+- title: Add a host
+  body: Enter a hostname or IP address. Put it in a folder or tag it; options set on a folder are inherited.
+- title: Choose a credential
+  body: Save a password, import an Ed25519 key, or on Mac point to a key held by your SSH agent.
+- title: Take off
+  body: Approve the host key once, and your shell opens. Your hosts are waiting on your other devices too.

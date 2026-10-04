@@ -1,0 +1,12 @@
+- title: Connect over SSH
+  body: Open outbound SSH connections to the servers you choose, in a full terminal emulator with a bundled monospaced font.
+- title: Organize your hosts
+  body: Group hosts in folders and tags, and set connection options once on a folder so every host inside inherits them.
+- title: Sync with your iCloud
+  body: Your host list and settings follow you between devices through your own private iCloud database. No Puddle Jumper account.
+- title: Credentials in Keychain
+  body: Passwords and private keys live in iCloud Keychain, behind Face ID, Touch ID or your passcode before each use.
+- title: Host keys pinned
+  body: Each server's host key is pinned on first connection. If it ever changes, the connection is refused.
+- title: Private by design
+  body: No analytics, no tracking, no ads, and no servers run by us. The app talks only to the hosts you connect to.

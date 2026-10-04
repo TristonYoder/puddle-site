@@ -1,0 +1,49 @@
+# ---------------------------------------------------------------------------
+# Site-wide values. Edit here (and in _data/) -- pages read from these.
+# Changing the domain: update `url`, `domain` and the CNAME file. See README.
+# ---------------------------------------------------------------------------
+title: Puddle Jumper
+tagline: SSH for Mac, iPad and iPhone
+description: >-
+  Puddle Jumper is an SSH client and terminal for Mac, iPad and iPhone. Hosts
+  sync through your own iCloud. No account, no analytics, nothing sent to us.
+
+url: "https://puddle.7co.dev"   # no trailing slash
+domain: puddle.7co.dev          # display only; the CNAME file must match
+baseurl: ""                     # leave empty for a custom domain
+
+publisher: 7 & Co LLC
+email: triston@7andco.studio
+copyright_year: 2026
+
+# App Store links. Leave blank until the apps are live; badges then switch
+# from "Coming soon" to real links automatically.
+app_store:
+  ios_url: ""
+  mac_url: ""
+
+# Legal dates shown on the legal pages.
+legal:
+  privacy_effective: "October 3, 2026"
+  terms_effective: "October 3, 2026"
+  apple_eula_url: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+
+# Navigation and footer links live in _data/nav.yml.
+# Landing page content lists live in _data/features.yml, steps.yml, platforms.yml.
+
+plugins:
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+  - .bundle

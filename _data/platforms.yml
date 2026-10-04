@@ -1,0 +1,9 @@
+- name: Mac
+  body: Full terminal on your desktop. Use keys held by an SSH agent such as 1Password's, without copying them into the app.
+  note: Tailscale peer discovery is in the Mac build distributed outside the Mac App Store.
+- name: iPad
+  body: A proper terminal on the big screen, with iPad multitasking and your hosts already synced.
+  note: Agent credentials sync but are not usable on iPad.
+- name: iPhone
+  body: The server you need to reach, from your pocket. Face ID guards your stored secrets.
+  note: Agent credentials sync but are not usable on iPhone.

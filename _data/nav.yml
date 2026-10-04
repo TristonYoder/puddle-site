@@ -1,0 +1,11 @@
+# Header navigation, in order.
+header:
+  - { title: Home, url: / }
+  - { title: Support, url: /support/ }
+  - { title: Privacy, url: /privacy/ }
+# Footer link row.
+footer:
+  - { title: Privacy, url: /privacy/ }
+  - { title: Terms, url: /terms/ }
+  - { title: Support, url: /support/ }
+  - { title: Licenses, url: /licenses/ }

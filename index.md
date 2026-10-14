@@ -64,7 +64,7 @@ One app that works across Mac, iPad and iPhone, with your hosts synced between t
 
 ## Ready for takeoff
 
-Puddle Jumper is on its way to the App Store.
+Puddle Jumper is on its way to the App Store. Until then, join the public beta on TestFlight.
 
 {% include badges.html %}
 

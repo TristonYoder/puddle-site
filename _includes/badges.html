@@ -1,13 +1,16 @@
-{%- comment -%} Download buttons. Real links appear once app_store.*_url are set in _config.yml. {%- endcomment -%}
+{%- comment -%} Download buttons. Real links appear once app_store.*_url are set in _config.yml; until then a TestFlight beta button shows if app_store.testflight_url is set. {%- endcomment -%}
 <div class="badges">
 {%- if site.app_store.ios_url != "" %}
 <a class="btn" href="{{ site.app_store.ios_url }}">App Store for iPhone &amp; iPad</a>
-{%- else %}
-<span class="btn soon" role="note">iPhone &amp; iPad <small>App Store, coming soon</small></span>
 {%- endif %}
 {%- if site.app_store.mac_url != "" %}
 <a class="btn" href="{{ site.app_store.mac_url }}">Mac App Store</a>
+{%- endif %}
+{%- if site.app_store.ios_url == "" and site.app_store.mac_url == "" %}
+{%- if site.app_store.testflight_url != "" %}
+<a class="btn" href="{{ site.app_store.testflight_url }}"><small>Join the beta on</small> TestFlight</a>
 {%- else %}
-<span class="btn soon" role="note">Mac <small>Mac App Store, coming soon</small></span>
+<span class="btn soon" role="note">iPhone, iPad &amp; Mac <small>App Store, coming soon</small></span>
+{%- endif %}
 {%- endif %}
 </div>

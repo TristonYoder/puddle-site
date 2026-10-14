@@ -17,10 +17,12 @@ email: triston@7andco.studio
 copyright_year: 2026
 
 # App Store links. Leave blank until the apps are live; badges then switch
-# from "Coming soon" to real links automatically.
+# to real links automatically. Until then the TestFlight beta link is shown
+# (or "Coming soon" if that is blank too).
 app_store:
   ios_url: ""
   mac_url: ""
+  testflight_url: "https://testflight.apple.com/join/4WHfXsgB"
 
 # Legal dates shown on the legal pages.
 legal:

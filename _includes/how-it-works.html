@@ -1,5 +1,5 @@
-<ol class="steps">
+<ol class="steps" style="--total-txt:'{{ site.data.steps | size }}'">
 {%- for s in site.data.steps %}
-<li><h3>{{ s.title }}</h3><p>{{ s.body }}</p></li>
+<li><h3>{{ s.title }} <span class="ok" aria-hidden="true">done</span></h3><p>{{ s.body }}</p></li>
 {%- endfor %}
 </ol>

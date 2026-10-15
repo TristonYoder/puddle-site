@@ -1,12 +1,21 @@
-<header class="site"><div class="wrap bar">
-<a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, home">{% include themed.html name="app-icon" static=true alt="" w=32 h=32 class="brand-icon" %}<span>{{ site.title }}</span></a>
-<div class="bar-right">
-<nav aria-label="Primary"><ul>
+{%- comment -%} Floating sidebar, as in the app: traffic lights, nav (like Hosts / Credentials), then a few joke "Sessions" (_data/sessions.yml) that play a fake transcript. {%- endcomment -%}
+<aside class="sidebar" id="sidebar">
+<div class="sb-top">
+<span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+<button type="button" class="icon-btn sb-toggle js-btn" aria-controls="sidebar" aria-label="Toggle sidebar">{% include icon.html name="sidebar" %}</button>
+</div>
+<nav aria-label="Primary"><ul class="sb-list">
 {%- for item in site.data.nav.header %}
 {%- assign cur = false -%}{%- if item.url == "/" and page.url == "/" %}{% assign cur = true %}{% elsif item.url != "/" and page.url == item.url %}{% assign cur = true %}{% endif %}
-<li><a href="{{ item.url | relative_url }}"{% if cur %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+<li><a href="{{ item.url | relative_url }}" data-key="{{ forloop.index }}"{% if cur %} aria-current="page"{% endif %}>{% include icon.html name=item.icon %}<span>{{ item.title }}</span></a></li>
 {%- endfor %}
 </ul></nav>
-{% include theme-toggle.html %}
+<div class="sessions js-block">
+<p class="sb-head">Sessions</p>
+<ul class="sb-list" id="session-list">
+{%- for s in site.data.sessions %}
+<li><button type="button" data-session="{{ forloop.index0 }}">{% include icon.html name="gear" %}<span>{{ s.name }}</span></button></li>
+{%- endfor %}
+</ul>
 </div>
-</div></header>
+</aside>

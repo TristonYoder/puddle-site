@@ -1,11 +1,30 @@
-{%- comment -%} Params: eyebrow, title, lede. Hero image is the animated plane through clouds. {%- endcomment -%}
-<section class="hero"><div class="wrap hero-grid">
+{%- comment -%} Params: eyebrow, title, lede. The plane flies through ASCII clouds. {%- endcomment -%}
+<section class="hero">
 <div class="hero-copy">
 <p class="eyebrow">{{ include.eyebrow | default: site.tagline }}</p>
 <h1>{{ include.title | default: site.title }}</h1>
 <p class="lede">{{ include.lede | default: site.description }}</p>
 {% include badges.html %}
-<p class="fine"><a href="{{ '/privacy/' | relative_url }}">Privacy policy</a> &middot; <a href="{{ '/support/' | relative_url }}">Get help</a></p>
+<p class="fine"><a href="{{ '/privacy/' | relative_url }}">privacy policy</a> &middot; <a href="{{ '/support/' | relative_url }}">get help</a></p>
 </div>
-<div class="hero-art frame">{% include themed.html name="plane-through-clouds" alt="A paper plane flying through drifting clouds" %}</div>
-</div></section>
+<div class="pane hero-art" role="img" aria-label="A paper plane flying through drifting clouds">
+<p class="pane-title" aria-hidden="true">sky.txt</p>
+<div class="sky" aria-hidden="true">
+<pre class="cloud c1">   .--.
+.-(    ).
+(___.__)__)</pre>
+<pre class="cloud c2">     _  _
+  .-( `  ).
+ (___ .  __)
+     `--'</pre>
+<pre class="cloud c3">  .-~~-.
+ (      )_
+(_________)</pre>
+<pre class="cloud c4"> .--.
+(____)</pre>
+<pre class="plane"><span class="trail">- -- ---</span>  \`-._
+<span class="trail"> -- ----</span>  &gt;====&gt;
+<span class="trail">- -- ---</span>  /_.-'</pre>
+</div>
+</div>
+</section>

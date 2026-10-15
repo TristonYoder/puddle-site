@@ -1,18 +1,16 @@
 {%- comment -%}
-  Theme-aware image. Params: name (file stem), alt, w, h, lazy (bool), static (bool: no motion variant), class.
-  Light mode uses assets/img/light, dark mode uses assets/img/dark; reduced motion swaps in <name>-static.svg.
+  Image with a reduced-motion fallback. Params: name (file stem in assets/img/dark), alt, w, h, lazy (bool), static (bool: no motion variant), class.
+  Reduced motion swaps in <name>-static.svg.
 {%- endcomment -%}
 {%- assign w = include.w | default: 512 -%}
 {%- assign h = include.h | default: 512 -%}
 {%- assign load = "eager" -%}{%- if include.lazy %}{% assign load = "lazy" %}{% endif -%}
-{%- assign modes = "light,dark" | split: "," -%}
-{%- for mode in modes -%}
-<span class="th th-{{ mode | slice: 0 }} {{ include.class }}">
+{%- assign base = '/assets/img/dark/' | append: include.name -%}
+<span class="th {{ include.class }}">
 {%- if include.static -%}
-<img src="{{ '/assets/img/' | append: mode | append: '/' | append: include.name | append: '.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
+<img src="{{ base | append: '.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
 {%- else -%}
-<img class="mo mo-a" src="{{ '/assets/img/' | append: mode | append: '/' | append: include.name | append: '.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
-<img class="mo mo-s" src="{{ '/assets/img/' | append: mode | append: '/' | append: include.name | append: '-static.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
+<img class="mo mo-a" src="{{ base | append: '.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
+<img class="mo mo-s" src="{{ base | append: '-static.svg' | relative_url }}" alt="{{ include.alt }}" width="{{ w }}" height="{{ h }}" loading="{{ load }}" decoding="async">
 {%- endif -%}
 </span>
-{%- endfor -%}

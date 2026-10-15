@@ -1,0 +1,9 @@
+{%- comment -%} powerlevel10k-style prompt, as in the app's terminal. The command comes from page.cmd; --n (its length) is set on .reveal in the layout so the content can wait for the typing. {%- endcomment -%}
+{%- assign path = page.url | replace: 'index.html', '' | remove: '.html' -%}{%- if path == "/" %}{% assign path = "" %}{% endif -%}
+{%- assign cmd = page.cmd | default: "" -%}
+<div class="p10k" aria-hidden="true">
+<span class="seg seg-os">{% include icon.html name="puddle" %}</span><span class="seg seg-dir">{% include icon.html name="home" %} ~{{ path }}</span>
+<span class="p10k-fill"></span>
+<span class="seg seg-ctx">with you@{{ site.domain | split: '.' | first }}</span><span class="seg seg-time">at <span class="js-clock">00:00:00</span> {% include icon.html name="clock" %}</span>
+</div>
+<p class="ps" aria-hidden="true"><span class="ps-arrow">&#10095;</span> <span class="typed">{{ cmd }}</span></p>

@@ -4,6 +4,7 @@ title: Support
 permalink: /support/
 description: Help with Puddle Jumper, an SSH client for Mac, iPad and iPhone.
 lede: Answers to common questions. If yours is not here, email us.
+cmd: man puddle
 ---
 <div class="faq" markdown="1">
 

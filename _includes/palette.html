@@ -1,0 +1,9 @@
+{%- comment -%} Jump palette (search pill, "/" or "?"): pages, this page's sections, shortcuts. JS only. {%- endcomment -%}
+<div class="palette" id="palette" hidden>
+<div class="pal-box" role="dialog" aria-modal="true" aria-label="Jump to">
+<label class="pal-field">{% include icon.html name="search" %}<input id="pal-input" type="text" placeholder="Jump to a page or section" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="pal-list"></label>
+<ul class="pal-list" id="pal-list" role="listbox"></ul>
+<p class="pal-keys"><b>1-{{ site.data.nav.header | size }}</b> pages <b>j/k</b> scroll <b>g/G</b> top/bottom <b>b</b> beta <b>esc</b> close</p>
+</div>
+</div>
+<script type="application/json" id="pal-pages">[{%- for item in site.data.nav.header -%}{"t":{{ item.title | jsonify }},"u":{{ item.url | relative_url | jsonify }}},{%- endfor -%}{%- for item in site.data.nav.footer -%}{"t":{{ item.title | jsonify }},"u":{{ item.url | relative_url | jsonify }}},{%- endfor -%}{"t":"Join the beta on TestFlight","u":{{ site.app_store.testflight_url | jsonify }}}]</script>

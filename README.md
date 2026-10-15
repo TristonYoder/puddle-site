@@ -15,7 +15,7 @@ Everything is Markdown with front matter in the repo root:
 | Licenses | `licenses.md` (text lives in `_includes/third-party-notices.txt`; re-copy it from `swift-ssh/Sources/Resources/THIRD-PARTY-NOTICES.txt` when dependencies change) |
 | 404 | `404.md` |
 
-Landing helpers (in `_includes/`): `hero.html`, `feature-grid.html`, `how-it-works.html`, `platforms.html`, `badges.html`, `morph.html`, `themed.html` (light/dark/reduced-motion image switcher).
+Landing helpers (in `_includes/`): `hero.html`, `feature-grid.html`, `how-it-works.html`, `platforms.html`, `badges.html`, `morph.html`, `themed.html` (reduced-motion image switcher). Chrome: `header.html` (sidebar), `toolbar.html`, `promptbar.html`, `palette.html`, `icon.html`, `intro.html` (launch screen).
 
 ## Site-wide values (one place)
 
@@ -25,9 +25,15 @@ Landing helpers (in `_includes/`): `hero.html`, `feature-grid.html`, `how-it-wor
 
 To change the domain: edit `url` and `domain` in `_config.yml`, the `CNAME` file, and the DNS section below. Links are relative, so nothing else moves. `assets/img/og.png` has no URL baked in.
 
-## Theming and motion
+## Look, keys and motion
 
-Light/dark follows the OS; the header button cycles Auto / Light / Dark and saves to `localStorage` (works without JS: stays Auto). Light mode uses the `light-dark-blue` graphics, dark mode uses `dark-teal` (`assets/img/light`, `assets/img/dark`). Under `prefers-reduced-motion`, animated SVGs are swapped for static ones and the home-page intro is disabled. The intro plays once per browser session (`sessionStorage`). Regenerate the social image with `scripts/make-og.sh` (needs Chrome).
+The site is dark only and dressed as the Puddle Jumper app window: floating sidebar (traffic lights, the `_data/nav.yml` pages with icons from `_includes/icon.html`, and a few joke "Sessions" from `_data/sessions.yml` that play a fake transcript in the terminal pane); the brand mark sits above the window, top left, a pill toolbar, and a terminal pane that opens with a powerlevel10k-style prompt that types the page's `cmd` (front matter), then fades the page content in. Chrome uses the system sans font, content the system monospace font (no web fonts). Landing sections start with a fake shell command (`<p class="cmd">` in `index.md`); cards are `.pane`s with their title cut into the border.
+
+Toolbar: `+` opens the TestFlight beta, the grid/list pills switch card layout (saved in `localStorage`), and the search pill opens a jump palette for pages and sections. Sidebar toggle works as in the app (overlay on phones).
+
+Keyboard (needs JS): `/` or `?` jump palette, `1`-`9` sidebar pages, `j`/`k` scroll, `g`/`G` top/bottom, `b` TestFlight.
+
+Graphics live in `assets/img/dark`. `assets/img/light` is unused but kept so its old URLs still resolve. Under `prefers-reduced-motion`, animated SVGs are swapped for static ones, the ASCII sky and typing stop, and the launch intro (the app's clouds, plane and `>_` loading screen) is skipped. The intro plays once per browser session (`sessionStorage`). Regenerate the social image with `scripts/make-og.sh` (needs Chrome).
 
 ## Preview locally
 
@@ -37,7 +43,7 @@ Needs Ruby 3.x (macOS system Ruby 2.6 is too old). With Nix:
 nix shell nixpkgs#ruby_3_3 nixpkgs#libyaml
 bundle config set --local path vendor/bundle
 bundle install
-bundle exec jekyll serve   # http://localhost:4000
+bundle exec jekyll serve   # http://localhost:4000 (also in .claude/launch.json)
 ```
 
 Or any Ruby >= 3.0 (rbenv, Homebrew) with the same `bundle` commands.

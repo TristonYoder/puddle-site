@@ -1,8 +1,9 @@
-# Header navigation, in order.
+# Sidebar navigation, in order. `icon` is a name from _includes/icon.html.
+# Number keys 1-9 jump to these in order.
 header:
-  - { title: Home, url: / }
-  - { title: Support, url: /support/ }
-  - { title: Privacy, url: /privacy/ }
+  - { title: Home, url: /, icon: hosts }
+  - { title: Support, url: /support/, icon: help }
+  - { title: Privacy, url: /privacy/, icon: key }
 # Footer link row.
 footer:
   - { title: Privacy, url: /privacy/ }

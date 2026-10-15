@@ -1,0 +1,28 @@
+# Joke "Sessions" in the sidebar. Clicking one plays this fake transcript in the terminal pane.
+# Nothing connects anywhere. `key` is a made-up fingerprint fragment; `out` may have several lines.
+- name: raspberrypi
+  user: pi
+  key: "r4sPb3rRy/pI+0wGl7u"
+  lines:
+    - cmd: uptime
+      out: " 22:31  up 413 days,  1 user,  load average: 0.00, 0.00, 0.00"
+    - cmd: vcgencmd measure_temp
+      out: "temp=71.3'C"
+    - cmd: echo "it's fine"
+      out: "it's fine"
+- name: homelab
+  user: you
+  key: "hOm3L4b/n0tAhObby+42"
+  lines:
+    - cmd: docker ps -q | wc -l
+      out: "47"
+    - cmd: cat TODO.md
+      out: "- [ ] document anything\n- [ ] label the cables\n- [x] buy another mini PC"
+- name: prod
+  user: root
+  key: "pR0d/d0Nt+t0uCh/m3"
+  lines:
+    - cmd: cat /etc/motd
+      out: "Unauthorized access is prohibited.\nAuthorized access is also discouraged."
+    - cmd: exit
+      out: "logout"

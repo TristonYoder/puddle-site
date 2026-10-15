@@ -5,6 +5,7 @@ permalink: /privacy/
 description: How Puddle Jumper handles your data. The developer collects none.
 effective_key: privacy_effective
 applies: "Applies to Puddle Jumper for macOS, iPadOS and iOS, published by 7 & Co LLC."
+cmd: cat PRIVACY.md
 ---
 
 

@@ -6,9 +6,8 @@
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ desc | escape }}">
 <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F1F9F9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#001B2B" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000F18">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ full_title | escape }}">
@@ -24,9 +23,8 @@
 <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
 <script>
 (function(){var d=document.documentElement;d.className+=' js';
-try{var t=localStorage.getItem('pj-theme');if(t==='light'||t==='dark')d.setAttribute('data-theme',t)}catch(e){}
 {%- if page.intro %}
-try{if(!sessionStorage.getItem('pj-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.className+=' intro-on';sessionStorage.setItem('pj-intro','1');setTimeout(function(){d.className=d.className.replace(' intro-on','')},2200)}}catch(e){}
+try{if(!sessionStorage.getItem('pj-intro')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){d.className+=' intro-on';sessionStorage.setItem('pj-intro','1')}}catch(e){}
 {%- endif %}
 })();
 </script>

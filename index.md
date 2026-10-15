@@ -4,10 +4,14 @@ title: Puddle Jumper
 description: SSH client and terminal for Mac, iPad and iPhone. Hosts sync through your own iCloud. No account, no analytics, nothing sent to the developer.
 permalink: /
 intro: true
+toolbar_title: Puddle Jumper
+cmd: ssh you@anywhere
 ---
 {% include hero.html eyebrow="SSH for Mac, iPad and iPhone" title="Hop to any server." lede="Puddle Jumper is an SSH client and terminal. Your hosts and credentials sync through your own iCloud. There is no account to create and nothing is sent to us." %}
 
 <section class="section" id="sec-features" markdown="1">
+
+<p class="cmd" aria-hidden="true">puddle features --all</p>
 
 ## Everything you need to get there
 
@@ -18,6 +22,8 @@ A clean terminal, your servers organized the way you think about them, and secre
 </section>
 
 <section class="section" id="sec-how-it-works" markdown="1">
+
+<p class="cmd" aria-hidden="true">puddle connect --explain</p>
 
 ## How it works
 
@@ -31,6 +37,9 @@ Three steps from a blank screen to a shell.
 
 <div class="split" markdown="1">
 <div markdown="1">
+
+<p class="cmd" aria-hidden="true">cat /etc/telemetry</p>
+<p class="cmd-out" aria-hidden="true">cat: /etc/telemetry: No such file or directory</p>
 
 ## Private by design
 
@@ -50,6 +59,8 @@ Your host list lives on your devices and in your private iCloud database. Passwo
 
 <section class="section" id="sec-platforms" markdown="1">
 
+<p class="cmd" aria-hidden="true">puddle --platforms</p>
+
 ## One app, three platforms
 
 One app that works across Mac, iPad and iPhone, with your hosts synced between them. Requires macOS 26, iPadOS 26 or iOS 26 or later.
@@ -61,6 +72,8 @@ One app that works across Mac, iPad and iPhone, with your hosts synced between t
 <section class="section last" id="sec-download" markdown="1">
 
 <div class="cta" markdown="1">
+
+<p class="cmd" aria-hidden="true">puddle install --beta</p>
 
 ## Ready for takeoff
 

@@ -1,0 +1,20 @@
+{%- comment -%} Toolbar, as in the app: title, pill button groups, search pill. {%- endcomment -%}
+{%- assign tb_title = page.toolbar_title | default: page.title -%}
+<div class="toolbar">
+<span class="tb-lead">
+<span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+<button type="button" class="icon-btn sb-toggle js-btn" aria-controls="sidebar" aria-label="Toggle sidebar">{% include icon.html name="sidebar" %}</button>
+</span>
+<p class="tb-title">{{ tb_title }}</p>
+<div class="tb-tools">
+<div class="pill-group">
+{%- if site.app_store.testflight_url != "" %}<a class="icon-btn" href="{{ site.app_store.testflight_url }}" title="Join the beta" aria-label="Join the beta on TestFlight">{% include icon.html name="plus" %}</a>{% endif %}
+<a class="icon-btn" href="{{ '/support/' | relative_url }}" title="Support" aria-label="Support">{% include icon.html name="folder-plus" %}</a>
+</div>
+<div class="pill-group js-flex" role="group" aria-label="Card layout">
+<button type="button" class="icon-btn view-btn" data-view="grid" aria-pressed="true" aria-label="Grid view">{% include icon.html name="grid" %}</button>
+<button type="button" class="icon-btn view-btn" data-view="list" aria-pressed="false" aria-label="List view">{% include icon.html name="list" %}</button>
+</div>
+<button type="button" class="search-pill js-flex" id="palette-open" aria-haspopup="dialog">{% include icon.html name="search" %}<span>Jump to&hellip;</span><kbd>/</kbd></button>
+</div>
+</div>

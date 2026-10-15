@@ -5,6 +5,7 @@ permalink: /terms/
 description: Terms of use for Puddle Jumper. Apple's standard license agreement applies.
 effective_key: terms_effective
 applies: "Applies to Puddle Jumper for macOS, iPadOS and iOS, published by 7 & Co LLC."
+cmd: cat TERMS.md
 ---
 <!-- TODO-legal: DRAFT for counsel review. Short by design; not reviewed by a lawyer. Governing law, venue and liability caps intentionally omitted. -->
 

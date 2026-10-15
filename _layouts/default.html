@@ -35,17 +35,17 @@ var heads=[].slice.call(d.querySelectorAll('main h2[id]'));
 
 /* joke sessions: play a fake transcript under the prompt */
 var sessions={{ site.data.sessions | jsonify }},out=d.getElementById('session-out'),ctx=d.querySelector('.seg-ctx'),ctx0=ctx.textContent,
-  typed=d.querySelector('.ps .typed'),cmd0=typed.textContent,
+  typed=d.querySelector('.ps .typed'),cmd0=typed.textContent,osSeg=d.querySelector('.seg-os'),os0=osSeg.innerHTML,
   sbtn=[].slice.call(d.querySelectorAll('[data-session]')),list=d.getElementById('session-list'),timer,
   still=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function line(cls,txt){var p=d.createElement('p');p.className=cls;p.textContent=txt;out.appendChild(p)}
 function setCmd(c){typed.textContent=c;typed.style.setProperty('--n',c.length)}
-function endSession(){clearTimeout(timer);out.hidden=true;out.innerHTML='';ctx.textContent=ctx0;setCmd(cmd0);h.classList.remove('in-session');sbtn.forEach(function(b){b.removeAttribute('aria-pressed')})}
+function endSession(){clearTimeout(timer);out.hidden=true;out.innerHTML='';ctx.textContent=ctx0;setCmd(cmd0);osSeg.innerHTML=os0;h.classList.remove('in-session');sbtn.forEach(function(b){b.removeAttribute('aria-pressed')})}
 function startSession(i){
   var s=sessions[i],who=s.user+'@'+s.name,steps=[['so-sys','Connecting to '+s.name+'...'],['so-sys','Host key SHA256:'+s.key+' pinned \u2713']];
   s.lines.forEach(function(l){steps.push(['so-cmd',who+':~$ '+l.cmd]);(l.out||'').split('\n').forEach(function(o){if(o)steps.push(['so-out',o])})});
   steps.push(['so-sys','Connection to '+s.name+' closed.']);
-  endSession();h.classList.add('in-session');ctx.textContent='with '+who;setCmd('ssh '+who);sbtn[i].setAttribute('aria-pressed','true');out.hidden=false;
+  endSession();h.classList.add('in-session');ctx.textContent='with '+who;setCmd('ssh '+who);osSeg.innerHTML=sbtn[i].querySelector('svg').outerHTML;sbtn[i].setAttribute('aria-pressed','true');out.hidden=false;
   scroller().scrollTo(0,0);
   var n=0;(function next(){if(n>=steps.length)return;line(steps[n][0],steps[n][1]);n++;timer=setTimeout(next,still?0:steps[n-1][0]==='so-cmd'?520:180)})();
 }

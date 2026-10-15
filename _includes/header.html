@@ -14,7 +14,7 @@
 <p class="sb-head">Sessions</p>
 <ul class="sb-list" id="session-list">
 {%- for s in site.data.sessions %}
-<li><button type="button" data-session="{{ forloop.index0 }}">{% include icon.html name="gear" %}<span>{{ s.name }}</span></button></li>
+<li><button type="button" data-session="{{ forloop.index0 }}">{% include os-icon.html name=s.os %}<span>{{ s.name }}</span></button></li>
 {%- endfor %}
 </ul>
 </div>

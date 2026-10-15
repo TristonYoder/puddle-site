@@ -1,6 +1,7 @@
 # Joke "Sessions" in the sidebar. Clicking one plays this fake transcript in the terminal pane.
-# Nothing connects anywhere. `key` is a made-up fingerprint fragment; `out` may have several lines.
+# `os` is a platform key from _includes/os-icon.html (same marks as the app). Nothing connects anywhere. `key` is a made-up fingerprint fragment; `out` may have several lines.
 - name: raspberrypi
+  os: raspberrypi
   user: pi
   key: "r4sPb3rRy/pI+0wGl7u"
   lines:
@@ -11,6 +12,7 @@
     - cmd: echo "it's fine"
       out: "it's fine"
 - name: homelab
+  os: nixos
   user: you
   key: "hOm3L4b/n0tAhObby+42"
   lines:
@@ -19,6 +21,7 @@
     - cmd: cat TODO.md
       out: "- [ ] document anything\n- [ ] label the cables\n- [x] buy another mini PC"
 - name: prod
+  os: ubuntu
   user: root
   key: "pR0d/d0Nt+t0uCh/m3"
   lines:

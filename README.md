@@ -33,7 +33,7 @@ Toolbar: `+` opens the TestFlight beta, the grid/list pills switch card layout (
 
 Keyboard (needs JS): `/` or `?` jump palette, `1`-`9` sidebar pages, `j`/`k` scroll, `g`/`G` top/bottom, `b` TestFlight.
 
-Graphics live in `assets/img/dark`. `assets/img/light` is unused but kept so its old URLs still resolve. Under `prefers-reduced-motion`, animated SVGs are swapped for static ones, the ASCII sky and typing stop, and the launch intro (the app's clouds, plane and `>_` loading screen) is skipped. The intro plays once per browser session (`sessionStorage`). Regenerate the social image with `scripts/make-og.sh` (needs Chrome).
+Graphics live in `assets/img/dark`. `assets/img/light` is unused but kept so its old URLs still resolve. Under `prefers-reduced-motion`, animated SVGs are swapped for static ones, the ASCII sky and typing stop, and the launch intro (the app's clouds, plane and `>_` loading screen) is skipped. The intro plays once per browser session (`sessionStorage`). Regenerate the social image with `scripts/make-og.sh` (needs Chrome). Session OS marks are the app's own Nerd Font glyphs, copied by `scripts/make-os-icons.py`; rerun it if `HostPlatform.glyph` changes in the app.
 
 ## Preview locally
 

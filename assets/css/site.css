@@ -104,7 +104,7 @@ html.sb-flip .tb-lead{display:flex}
 .seg{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 14px 0 12px;position:relative}
 .seg .ic{width:15px;height:15px}
 .seg-os .ic{width:28px;height:28px;margin:-2px 0}
-.seg-os .os{width:17px;height:17px;margin:0 2px}
+.seg-os .ic.os{width:15px;height:15px;margin:0 2px}
 .in-session .ps::after{display:none}
 .seg-os{background:#B9BEC6;color:var(--ink);border-radius:15px 0 0 15px;padding-right:12px}
 .seg-dir{background:#5FAEE8;color:var(--ink);font-weight:700;padding-left:20px;
